@@ -14,7 +14,13 @@ class CreateDailyDevotionsTable extends Migration
     public function up()
     {
         Schema::create('daily_devotions', function (Blueprint $table) {
+			$table->engine = 'InnoDB';
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->string('title')->unique();
+            $table->text('daily_devotion');
+			$table->date('devotion_date');
             $table->timestamps();
         });
     }
