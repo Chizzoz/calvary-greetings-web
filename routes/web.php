@@ -13,19 +13,26 @@ use App\DailyDevotion;
 |
 */
 
+Auth::routes();
+
 Route::get('/', function () {
-    $data['devotions'] = DB::table('daily_devotions')->select('id','title','devotion_date')->get();
+    $data['devotions'] = DB::table('daily_devotions')->select('id','title','devotion_date','title_slug')->get();
     $data['calendar_head'] = true;
     return view('calendar', $data);
 });
-
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+
+// Daily Devotion Routes
+Route::get('/devotion/{daily_devotion}', function (DailyDevotion $daily_devotion) {
+    $data['devotion'] = $daily_devotion;
+    return view('devotion.view', $data);
+})->name('devotion_view');
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
