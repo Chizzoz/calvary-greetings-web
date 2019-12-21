@@ -10,7 +10,6 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,6 +17,56 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @if ($calendar_head)
+        <!-- Calendar Stuff -->
+        <link href='fullcalendar/core/main.css' rel='stylesheet' />
+        <link href='fullcalendar/daygrid/main.css' rel='stylesheet' />
+        <link href='fullcalendar/list/main.css' rel='stylesheet' />
+        <link href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet'>
+
+        <script src='fullcalendar/core/main.js'></script>
+        <script src='fullcalendar/daygrid/main.js'></script>
+        <script src='fullcalendar/list/main.js'></script>
+        <script src='fullcalendar/interaction/main.js'></script>
+        <script src='fullcalendar/bootstrap/main.js'></script>
+        <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                plugins: [ 'dayGrid', 'list', 'bootstrap', 'interaction' ],
+                defaultView: 'dayGridMonth',
+                timeZone: 'Africa/Lusaka',
+                themeSystem: 'bootstrap',
+                header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,listMonth'
+                },
+                weekNumbers: true,
+                events: [
+                    <?php $count = count($devotions); ?>
+                    @foreach($devotions as $devotion)
+                    {
+                    id: '{{ $devotion->id }}',
+                    title: '{{ $devotion->title }}',
+                    start: '{{ $devotion->devotion_date }}',
+                    url: '#'
+                    }
+                    @if($count > 1)
+                        ,
+                    @endif
+                    <?php $count -= 1 ?>
+                    @endforeach
+                ]
+            });
+
+            calendar.render();
+        });
+
+        </script>
+    @endif
 </head>
 <body>
     <div id="app">

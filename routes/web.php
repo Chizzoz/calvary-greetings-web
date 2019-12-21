@@ -1,5 +1,7 @@
 <?php
 
+use App\DailyDevotion;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +14,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data['devotions'] = DB::table('daily_devotions')->select('id','title','devotion_date')->get();
+    $data['calendar_head'] = true;
+    return view('calendar', $data);
 });
 
 Auth::routes();
