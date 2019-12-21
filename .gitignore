@@ -22,5 +22,3 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
-#CPanel yaml file
-.cpanel.yml
