@@ -21,6 +21,7 @@ class CreateDailyDevotionsTable extends Migration
             $table->string('title')->unique();
             $table->text('daily_devotion');
 			$table->date('devotion_date');
+            $table->string('title_slug')->unique();
             $table->timestamps();
         });
     }
