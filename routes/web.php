@@ -13,6 +13,7 @@ use App\DailyDevotion;
 |
 */
 
+// Auth Routes
 Auth::routes();
 
 Route::get('/', function () {
