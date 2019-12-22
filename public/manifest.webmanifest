@@ -3,97 +3,97 @@
 	"short_name" : "Calvary Greeting Daily Devotion",
 	"icons" : [
         {
-            "src": "/images/02725ee6-6d33-557c-3567-84e1c79c4f1d.webPlatform.png",
+            "src": "./images/02725ee6-6d33-557c-3567-84e1c79c4f1d.webPlatform.png",
             "sizes": "44x44",
             "type": "image/png"
         },
         {
-            "src": "/images/1acf24e0-5c00-b83f-c500-1a5257a9c8de.webPlatform.png",
+            "src": "./images/1acf24e0-5c00-b83f-c500-1a5257a9c8de.webPlatform.png",
             "sizes": "48x48",
             "type": "image/png"
         },
         {
-            "src": "/images/df96d5ec-e500-cff1-b454-324f7dfc88f6.webPlatform.png",
+            "src": "./images/df96d5ec-e500-cff1-b454-324f7dfc88f6.webPlatform.png",
             "sizes": "1240x600",
             "type": "image/png"
         },
         {
-            "src": "/images/24f7b184-400c-f392-97b4-a517aa29e75e.webPlatform.png",
+            "src": "./images/24f7b184-400c-f392-97b4-a517aa29e75e.webPlatform.png",
             "sizes": "300x300",
             "type": "image/png"
         },
         {
-            "src": "/images/a4755dee-b4a0-62df-7926-b4b37be2d153.webPlatform.png",
+            "src": "./images/a4755dee-b4a0-62df-7926-b4b37be2d153.webPlatform.png",
             "sizes": "150x150",
             "type": "image/png"
         },
         {
-            "src": "/images/5559fa51-fba4-d696-39fc-69c22ccc3632.webPlatform.png",
+            "src": "./images/5559fa51-fba4-d696-39fc-69c22ccc3632.webPlatform.png",
             "sizes": "88x88",
             "type": "image/png"
         },
         {
-            "src": "/images/333ca3a2-2374-c1c1-cc90-592bee755440.webPlatform.png",
+            "src": "./images/333ca3a2-2374-c1c1-cc90-592bee755440.webPlatform.png",
             "sizes": "24x24",
             "type": "image/png"
         },
         {
-            "src": "/images/21f0e6b8-0564-e8cb-0051-cf224fdf09c4.webPlatform.png",
+            "src": "./images/21f0e6b8-0564-e8cb-0051-cf224fdf09c4.webPlatform.png",
             "sizes": "50x50",
             "type": "image/png"
         },
         {
-            "src": "/images/9b56caa8-ea5c-336c-2408-369e25e3fe72.webPlatform.png",
+            "src": "./images/9b56caa8-ea5c-336c-2408-369e25e3fe72.webPlatform.png",
             "sizes": "620x300",
             "type": "image/png"
         },
         {
-            "src": "/images/9c1e2fa0-87af-b0a6-e738-7330da2ffdc8.webPlatform.png",
+            "src": "./images/9c1e2fa0-87af-b0a6-e738-7330da2ffdc8.webPlatform.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/images/6ae0d19e-e2df-c9d5-4e78-399d254f15da.webPlatform.png",
+            "src": "./images/6ae0d19e-e2df-c9d5-4e78-399d254f15da.webPlatform.png",
             "sizes": "144x144",
             "type": "image/png"
         },
         {
-            "src": "/images/2cf3454e-2b35-f94f-fd5d-86993763b013.webPlatform.png",
+            "src": "./images/2cf3454e-2b35-f94f-fd5d-86993763b013.webPlatform.png",
             "sizes": "96x96",
             "type": "image/png"
         },
         {
-            "src": "/images/bb743856-b406-a9df-57aa-36cfd026372a.webPlatform.png",
+            "src": "./images/bb743856-b406-a9df-57aa-36cfd026372a.webPlatform.png",
             "sizes": "72x72",
             "type": "image/png"
         },
         {
-            "src": "/images/da62c254-0dd7-c6a5-a7fd-b2d6f279870d.webPlatform.png",
+            "src": "./images/da62c254-0dd7-c6a5-a7fd-b2d6f279870d.webPlatform.png",
             "sizes": "36x36",
             "type": "image/png"
         },
         {
-            "src": "/images/92ef769a-a919-6a61-0209-1c221f6b1f16.webPlatform.png",
+            "src": "./images/92ef769a-a919-6a61-0209-1c221f6b1f16.webPlatform.png",
             "sizes": "1024x1024",
             "type": "image/png"
         },
         {
-            "src": "/images/cc994000-867f-fc32-cbdc-b6f88db0f5a7.webPlatform.png",
+            "src": "./images/cc994000-867f-fc32-cbdc-b6f88db0f5a7.webPlatform.png",
             "sizes": "180x180",
             "type": "image/png"
         },
         {
-            "src": "/images/37075fbd-5d15-c8c8-cae5-612732f224ee.webPlatform.png",
+            "src": "./images/37075fbd-5d15-c8c8-cae5-612732f224ee.webPlatform.png",
             "sizes": "152x152",
             "type": "image/png"
         },
         {
-            "src": "/images/7391ea7f-1c9a-b159-278e-49655ab020b6.webPlatform.png",
+            "src": "./images/7391ea7f-1c9a-b159-278e-49655ab020b6.webPlatform.png",
             "sizes": "120x120",
             "type": "image/png"
         },
         {
-            "src": "/images/8dfe0770-48e0-b49d-961c-1676722bd64e.webPlatform.png",
+            "src": "./images/8dfe0770-48e0-b49d-961c-1676722bd64e.webPlatform.png",
             "sizes": "76x76",
             "type": "image/png"
 		}
