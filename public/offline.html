@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- CSRF Token -->
-	<meta name="csrf-token" content="{{ csrf_token() }}">
+	<meta name="csrf-token" content="xqxjkqXGdpFK1tJeJUbfMletpoSFPM5bMgu8ftNV">
 
 	<!-- title -->
-    <title>{{ config('app.name') }} | Makeni Assembly of God | PAOG</title>
+    <title>Calvary Greeting Daily Devotion By Bhishop C Chikumbi | Makeni Assembly of God | PAOG</title>
 
     <!-- Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -20,20 +20,19 @@
     <link rel='manifest' href='/manifest.webmanifest'>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="https://calvary-greetings.oneziko.com/css/app.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel='stylesheet' href="{{ asset('css/OverlayScrollbars.min.css') }}">
+    <link rel='stylesheet' href="https://calvary-greetings.oneziko.com/css/OverlayScrollbars.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <!-- Bulma Version 0.8.x-->
-    <link rel="stylesheet" href="{{ asset('css/bulma.min.css') }}" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/custom.css') }}">
+    <link rel="stylesheet" href="https://calvary-greetings.oneziko.com/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://calvary-greetings.oneziko.com/css/custom.css">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     
-    @if (isset($calendar_head))
-        <!-- Calendar Stuff -->
+            <!-- Calendar Stuff -->
         <link href='fullcalendar/core/main.css' rel='stylesheet' />
         <link href='fullcalendar/daygrid/main.css' rel='stylesheet' />
         <link href='fullcalendar/list/main.css' rel='stylesheet' />
@@ -69,28 +68,14 @@
                 },
                 weekNumbers: true,
                 events: [
-                    <?php $count = count($devotions); ?>
-                    @foreach($devotions as $devotion)
-                    {
-                    id: '{{ $devotion->id }}',
-                    title: '{{ $devotion->title }}',
-                    start: '{{ $devotion->devotion_date }}',
-                    url: '{{ route("devotion_view", $devotion->title_slug) }}'
-                    }
-                    @if($count > 1)
-                        ,
-                    @endif
-                    <?php $count -= 1 ?>
-                    @endforeach
-                ]
+                                                        ]
             });
 
             calendar.render();
         });
 
         </script>
-    @endif
-</head>
+    </head>
 
 <body>
     <div id="app">
@@ -99,7 +84,7 @@
         <div class="container">
             <div class="navbar-brand">
                 <a class="navbar-item" href="../">
-                        <img src="{{ asset('img/maog_logo.png') }}" alt="MAOG Logo">
+                        <img src="https://calvary-greetings.oneziko.com/img/maog_logo.png" alt="MAOG Logo">
                     </a>
                 <span class="navbar-burger burger" data-target="navbarMenu">
                         <span></span>
@@ -110,45 +95,10 @@
             <div id="navbarMenu" class="navbar-menu">
                 <div class="navbar-end">
                     <!-- Authentication Links -->
-                    @guest
-                        <a href="{{ route('about') }}" class="navbar-item is-active">
+                                            <a href="https://calvary-greetings.oneziko.com/about" class="navbar-item is-active">
                             About
                         </a>
-                    @else
-                        <a href="{{ route('about') }}" class="navbar-item is-active">
-                            About
-                        </a>
-                        <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link">
-                                {{ Auth::user()->name }}
-                                </a>
-                            <div class="navbar-dropdown">
-                                <a href="/admin" class="navbar-item">
-                                        Dashboard
-                                    </a>
-                                <a href="/admin/profile" class="navbar-item">
-                                        Profile
-                                    </a>
-                                <a href="/admin/settings" class="navbar-item">
-                                        Settings
-                                    </a>
-                                <hr class="navbar-divider">
-                                <div class="navbar-item">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                        document.getElementById('logout-form').submit();">
-                                            {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
                                 </div>
-                            </div>
-                        </div>
-                </div>
-                @endguest
-            </div>
         </div>
     </nav>
     <!-- END NAV -->
@@ -169,7 +119,9 @@
                 <!-- START ARTICLE -->
                 <div class="card article">
                     <div class="card-content">
-                        @yield('content')
+                            <div class="container">
+        <div id='calendar'></div>
+    </div>
                     </div>
                 </div>
                 <!-- END ARTICLE -->
@@ -200,25 +152,7 @@
     OverlayScrollbars(document.querySelectorAll("body"), { });
     });
     </script>
-
-    <script>
-    // Check compatibility for the browser we're running this in
-    if ("serviceWorker" in navigator) {
-        if (navigator.serviceWorker.controller) {
-        console.log("Active service worker found, no need to register");
-        } else {
-        // Register the service worker
-        navigator.serviceWorker
-            .register("sw.js", {
-            scope: "./"
-            })
-            .then(function (reg) {
-            console.log("Service worker has been registered for scope: " + reg.scope);
-            });
-        }
-    }
-    </script>
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="https://calvary-greetings.oneziko.com/js/app.js"></script>
 </body>
 
 </html>
