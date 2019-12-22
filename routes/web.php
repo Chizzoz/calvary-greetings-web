@@ -34,7 +34,7 @@ Route::get('/devotion/{daily_devotion}', function (DailyDevotion $daily_devotion
     return view('devotion.view', $data);
 })->name('devotion_view');
 
-
+// Admin Panel
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
