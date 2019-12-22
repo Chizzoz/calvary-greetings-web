@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0096ff">
+    <meta name="description" content="Your daily devotion, Calvary Greetings, delivered by Bishop Chikumbi of Makeni Assembly Of God (MAOG) Church.">
 
 	<!-- CSRF Token -->
 	<meta name="csrf-token" content="{{ csrf_token() }}">
@@ -217,6 +219,36 @@
         }
     }
     </script>
+	<script>
+            let deferredPrompt = null;
+        
+        window.addEventListener('beforeinstallprompt', (e) => {
+          // Prevent Chrome 67 and earlier from automatically showing the prompt
+          e.preventDefault();
+          // Stash the event so it can be triggered later.
+          deferredPrompt = e;
+        });
+        
+        async function install() {
+          if (deferredPrompt) {
+            deferredPrompt.prompt();
+            console.log(deferredPrompt)
+            deferredPrompt.userChoice.then(function(choiceResult){
+        
+              if (choiceResult.outcome === 'accepted') {
+              console.log('Your PWA has been installed');
+            } else {
+              console.log('User chose to not install your PWA');
+            }
+        
+            deferredPrompt = null;
+        
+            });
+        
+         
+          }
+        }
+	</script>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 
