@@ -16,3 +16,12 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Jasonette Routes
+Route::get('/calendar', function () {
+    return response(view('jasonette.calendar'),200, ['Content-Type' => 'application/json']);
+})->name('jasonette_calendar');
+
+Route::get('/about', function () {
+    return response(view('jasonette.about'),200, ['Content-Type' => 'application/json']);
+})->name('jasonette_about');
