@@ -220,23 +220,6 @@
     }
     </script>
 	<script>
-        this.onpush = function(event) {
-          console.log(event.data);
-        }
-        
-        navigator.serviceWorker.register('sw.js').then(
-          function(serviceWorkerRegistration) {
-            serviceWorkerRegistration.pushManager.subscribe().then(
-              function(pushSubscription) {
-                console.log(pushSubscription.subscriptionId);
-                console.log(pushSubscription.endpoint);
-              }, function(error) {
-                console.log(error);
-              }
-            );
-          });
-	</script>
-	<script>
             let deferredPrompt = null;
         
         window.addEventListener('beforeinstallprompt', (e) => {
