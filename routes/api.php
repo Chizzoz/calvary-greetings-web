@@ -19,6 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 // Jasonette Routes
 Route::get('/calendar', function () {
+    $data['calendar_head'] = true;
     return response(view('jasonette.calendar'),200, ['Content-Type' => 'application/json']);
 })->name('jasonette_calendar');
 
