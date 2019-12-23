@@ -102,7 +102,7 @@
 	"background_color" : "#0096ff",
     "display" : "standalone",
     "prefer_related_applications": false,
-	"start_url" : "/",
+	"start_url" : "https://calvary-greetings.oneziko.com",
 	"lang" : "English",
 	"screenshots" : [],
 	"description" : "Your daily devotion, Calvary Greetings, delivered by Bishop Chikumbi of Makeni Assembly Of God (MAOG) Church",
