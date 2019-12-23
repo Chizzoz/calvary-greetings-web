@@ -46,7 +46,7 @@
 					},
 					"sections": [{
 						"items": {
-							"{{#each about}}": {
+							"@{{#each about}}": {
 								"type": "vertical",
 								"style": {
 									"spacing": "5"
@@ -61,7 +61,7 @@
 									"components": [{
 											"type": "html",
 											"class": "label_class",
-											"text": "{{text}}",
+											"text": "@{{text}}",
 											"action": {
 												"type": "$default"
 											}
