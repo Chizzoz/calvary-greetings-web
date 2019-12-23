@@ -35,7 +35,7 @@
 				"body": {
 					"header": {
 						"style": {
-							"background": "#56b000 "
+							"background": "#0096ff "
 						},
 						"title": {
 							"type": "image",

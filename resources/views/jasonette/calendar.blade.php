@@ -35,7 +35,7 @@
 				"body": {
 					"header": {
 						"style": {
-							"background": "#56b000 "
+							"background": "#0096ff "
 						},
 						"title": {
 							"type": "image",
@@ -76,13 +76,13 @@
 							"style": {
 								"background": "rgba(51,51,51,0.8)",
 								"color:disabled": "#adadad",
-								"color": "#56b000"
+								"color": "#0096ff"
 							},
 							"items": [
 								{
 									"text": "Home",
 									"url": "{{ route('jasonette_calendar') }}",
-									"image": "https://png.icons8.com/material/96/56b000/dog-house.png",
+									"image": "https://png.icons8.com/material/96/0096ff/dog-house.png",
 									"style": {
 										"height": "20"
 									}
@@ -90,7 +90,7 @@
 								{
 									"text": "About",
 									"url": "{{ route('jasonette_about') }}",
-									"image": "https://png.icons8.com/material/96/56b000/info-squared.png",
+									"image": "https://png.icons8.com/material/96/0096ff/info-squared.png",
 									"style": {
 										"height": "20"
 									}
