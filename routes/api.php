@@ -18,10 +18,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 // Jasonette Routes
-Route::get('/calendar', function () {
+Route::get('/calendar.json', function () {
     return response(view('jasonette.calendar'),200, ['Content-Type' => 'application/json']);
 })->name('jasonette_calendar');
 
-Route::get('/about', function () {
+Route::get('/about.json', function () {
     return response(view('jasonette.about'),200, ['Content-Type' => 'application/json']);
 })->name('jasonette_about');
